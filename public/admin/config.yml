@@ -1,14 +1,15 @@
 backend:
-  name: git-gateway
-  branch: main # Your Git branch
+  name: github
+  branch: rafa2135/veridian-models-portfolio-cms
+  local_backend: true
 
 media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: "blog"
-    label: "Blog Posts"
-    folder: "site/content/blog"
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
