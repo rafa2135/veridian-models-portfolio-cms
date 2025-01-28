@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: rafa2135/veridian-models-portfolio-cms # Your repository
+  branch: main # Your default branch
+  site_domain: "http://localhost:3000" # For local development
+  app_id: "APP_ID"
+  auth_endpoint: "AUTH_ENDPOINT"
+media_folder: static/uploads # Path to store uploaded media
+public_folder: /uploads # Public URL for media
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts" # Path to your content folder
+    create: true # Allow creating new posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Slug format for new posts
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "body", label: "Body", widget: "markdown" }
